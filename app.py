@@ -92,7 +92,6 @@ def get_specific_post(post_id):
 #Delete a post
 @app.route("/api/posts/<int:post_id>/", methods = ["DELETE"])
 def delete_post(post_id):
-    #Question do we need to update the ids of the rest of the posts after one has been deleted
     post = posts.get(post_id)
     if post:
         del posts[post_id]
